@@ -1,6 +1,6 @@
 {
   "name": "xazure-cms-module-auth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Provides basic auth functionality for Xazure CMS.",
   "main": "dist",
   "scripts": {
@@ -18,8 +18,8 @@
   "author": "Christian Snodgrass <christian.snodgrass.open@gmail.com> (http://xazure.net)",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/samanime/xazure-cms-module-auth.git"
+    "type": "git",
+    "url": "https://github.com/samanime/xazure-cms-module-auth.git"
   },
   "bugs": {
     "url": "https://github.com/samanime/xazure-cms-module-auth/issues"
