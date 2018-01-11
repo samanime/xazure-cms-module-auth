@@ -1,0 +1,8 @@
+{
+  "presets": [["env", { "modules": false }]],
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    ["import-rename", {"^(\\.+)\/((.(?!\\.[a-z]+))*)$": "$1/$2.js"}]
+  ]
+}

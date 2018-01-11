@@ -1,0 +1,48 @@
+{
+  "name": "xazure-cms-module-auth",
+  "version": "0.1.0",
+  "description": "Provides basic auth functionality for Xazure CMS.",
+  "main": "dist",
+  "scripts": {
+    "postpublish": "git push & git push --tags",
+    "start": "npm run clean & concurrently \"npm run js:watch\" \"npm run css:watch\" \"npm run static:watch\"",
+    "clean": "rimraf -rf dist || exit 0",
+    "build": "npm run clean & npm run js & npm run js:module & npm run css & npm run static",
+    "js": "babel src -d dist -s",
+    "js:watch": "npm run js -- -w",
+    "css": "do-if-exists \"src/**/*.css\" \"postcss src/**/index.css -b src -d dist\"",
+    "css:watch": "nodemon --watch src -e css --exec \"npm run css\"",
+    "static": "cpx \"src/**/!(*.js|*.css)\" \"dist\"",
+    "static:watch": "npm run static -- -w"
+  },
+  "author": "Christian Snodgrass <christian.snodgrass.open@gmail.com> (http://xazure.net)",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/samanime/xazure-cms-module-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samanime/xazure-cms-module-auth/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.0-rc0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-import-rename": "^1.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
+    "cpx": "^1.5.0",
+    "cssnano": "^3.10.0",
+    "do-if-exists": "0.0.1",
+    "nodemon": "^1.14.6",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^3.0.0",
+    "rimraf": "^2.6.2",
+    "xazure-cms-utils": "^0.1.0"
+  }
+}
