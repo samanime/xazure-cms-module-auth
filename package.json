@@ -1,6 +1,6 @@
 {
   "name": "xazure-module-auth",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides basic auth functionality for Xazure framework.",
   "main": "dist",
   "scripts": {
